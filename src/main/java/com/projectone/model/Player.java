@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 @AllArgsConstructor
@@ -13,7 +14,7 @@ import javax.persistence.Entity;
 @Data
 public class Player {
 
-    @Column
+    @Id
     private String player_name;
     @Column
     private int experience_level;

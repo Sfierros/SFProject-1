@@ -19,16 +19,25 @@ public class EnemyService{
     }
 
     public List<Enemy> getAllEnemies() {
-        return enemyRepository.getAllEnemies();
+        return enemyRepository.findALl();
     }
 
-    //TODO later
-    public void getRandomEnemy(Enemy e)
+//    public Enemy getRandomEnemy()
+//    {
+//        return enemyRepository.getRandomEnemy();
+//    }
+    public Enemy saveEnemy(Enemy e)
     {
-
+        return enemyRepository.save(e);
     }
-    public Enemy createEnemy(Enemy e)
+
+    public Enemy findEnemyByName(String name)
     {
-        return null;
+        return enemyRepository.findByName(name);
+    }
+
+    public void deleteEnemy(Enemy e)
+    {
+        enemyRepository.delete(e);
     }
 }
