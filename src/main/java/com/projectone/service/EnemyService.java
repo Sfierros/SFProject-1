@@ -24,8 +24,9 @@ public class EnemyService{
 
 //    public Enemy getRandomEnemy()
 //    {
-//        return enemyRepository.getRandomEnemy();
+//        return enemyRepository.findOne();
 //    }
+
     public Enemy saveEnemy(Enemy e)
     {
         return enemyRepository.save(e);
