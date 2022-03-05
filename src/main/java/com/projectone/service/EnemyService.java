@@ -5,12 +5,19 @@ import com.projectone.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.NamedQuery;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 
 @Service
+
 public class EnemyService{
     EnemyRepository enemyRepository;
+
+    @PersistenceContext
+    EntityManager em;
 
     @Autowired
     public EnemyService(EnemyRepository enemyRepository)
@@ -22,10 +29,11 @@ public class EnemyService{
         return enemyRepository.findALl();
     }
 
-//    public Enemy getRandomEnemy()
-//    {
-//        return enemyRepository.findOne();
-//    }
+
+    public Enemy getRandomEnemy()
+    {
+        return (Enemy) em.createNamedQuery("getRandomEnemy");
+    }
 
     public Enemy saveEnemy(Enemy e)
     {

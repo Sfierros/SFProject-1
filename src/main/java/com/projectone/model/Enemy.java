@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Enemy")
@@ -16,12 +13,13 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Data
 @ToString
+@NamedQuery(name= "Enemy.getRandomEnemy",
+        query= "SELECT TOP 1 enemy_name, experience_level" +
+                " FROM Enemy ORDER BY NEWID()")
 public class Enemy {
-
-
     @Id
     private String enemyName;
-    @Column
-    private int experienceLevel;
-
+    @OneToOne
+    @JoinColumn(name = "experienceLevel")
+    public Experience experience;
 }
