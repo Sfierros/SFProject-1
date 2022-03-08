@@ -4,9 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -15,10 +14,12 @@ import javax.persistence.Id;
 public class Player {
 
     @Id
-    private String player_name;
-    @Column
-    private int experience_level;
-    @Column
-    private String weapon_choice;
+    private String playerName;
+    @OneToOne
+    @JoinColumn(name = "experienceLevel")
+    private Experience experience;
 
+    @ManyToOne
+    @JoinColumn(name = "weaponChoice")
+    private Weapon Weapon;
 }

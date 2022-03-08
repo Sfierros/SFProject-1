@@ -33,9 +33,9 @@ public class EnemyService{
 //        return (Enemy) em.createNamedQuery("getRandomEnemy");
 //    }
 
-    public Enemy saveEnemy(Enemy e)
+    public Enemy saveEnemy(Enemy enemy)
     {
-        return enemyRepository.save(e);
+        return enemyRepository.save(enemy);
     }
 
     public Enemy findEnemyByName(String name)
@@ -43,8 +43,8 @@ public class EnemyService{
         return enemyRepository.findByName(name);
     }
 
-    public void deleteEnemy(Enemy e)
+    public void deleteEnemy(Enemy enemy)
     {
-        enemyRepository.delete(e);
+        enemyRepository.delete(enemy);
     }
 }

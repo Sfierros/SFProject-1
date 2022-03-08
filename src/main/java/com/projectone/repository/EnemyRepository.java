@@ -21,7 +21,7 @@ public interface EnemyRepository extends JpaRepository<Enemy, String> {
     @Query("from Enemy where enemyName = :name")
     Enemy findByName(String name);
 
-    Enemy save(Enemy e);
+    Enemy save(Enemy enemy);
 
-    void delete(Enemy e);
+    void delete(Enemy enemy);
 }

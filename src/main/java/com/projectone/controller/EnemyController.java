@@ -52,10 +52,10 @@ public class EnemyController {
 
     //works, returns true if delete is successful
     @DeleteMapping("name/{e}")
-    public boolean deleteEnemy(@PathVariable Enemy e)
+    public boolean deleteEnemy(@PathVariable Enemy enemy)
     {
-            enemyService.deleteEnemy(e);
-            System.out.println(e.toString() + " was deleted.");
+            enemyService.deleteEnemy(enemy);
+            System.out.println(enemy.toString() + " was deleted.");
             return true;
     }
 }

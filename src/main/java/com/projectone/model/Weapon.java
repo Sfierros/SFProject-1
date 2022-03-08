@@ -3,18 +3,24 @@ package com.projectone.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table(name = "Weapon")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@ToString
 public class Weapon {
 
     @Id
-    private String weapon_choice;
+    private String weaponChoice;
 
+    @OneToMany
+    @JoinColumn(name = "weaponChoice")
+    public List<Player> player;
 }
