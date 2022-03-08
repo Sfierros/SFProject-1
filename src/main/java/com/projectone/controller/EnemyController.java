@@ -28,12 +28,13 @@ public class EnemyController {
     Azure SQL Command
     SELECT TOP 1 enemy_name from enemy
     ORDER BY NEWID()
-    */
+
     @GetMapping("random")
     public Enemy getRandomEnemy()
     {
         return enemyService.getRandomEnemy();
     }
+    */
 
     //works
     @PostMapping("saveEnemy")

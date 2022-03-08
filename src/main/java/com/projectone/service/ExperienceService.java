@@ -4,7 +4,9 @@ package com.projectone.service;
 import com.projectone.model.Experience;
 import com.projectone.repository.ExperienceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ExperienceService {
     ExperienceRepository experienceRepository;
 

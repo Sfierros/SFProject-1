@@ -13,13 +13,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 @ToString
-@NamedQuery(name= "Enemy.getRandomEnemy",
-        query= "SELECT TOP 1 enemy_name, experience_level" +
-                " FROM Enemy ORDER BY NEWID()")
+//@NamedQuery(name= "Enemy.getRandomEnemy",
+//        query= "SELECT TOP 1 enemy_name, experience_level" +
+//                " FROM Enemy ORDER BY NEWID()")
 public class Enemy {
     @Id
     private String enemyName;
     @OneToOne
     @JoinColumn(name = "experienceLevel")
-    public Experience experience;
+    public Experience experienceLevel;
 }
