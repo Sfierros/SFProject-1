@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -17,9 +16,10 @@ public class Player {
     private String playerName;
     @OneToOne
     @JoinColumn(name = "experienceLevel")
-    private Experience experience;
+    private Experience experienceLevel;
 
     @ManyToOne
     @JoinColumn(name = "weaponChoice")
-    private Weapon Weapon;
+    //the problem might be that I'm referencing a String and comparing it to a Weapon object????
+    private Weapon weaponChoice;
 }

@@ -41,4 +41,8 @@ public class PlayerController {
         System.out.println(player.toString() + " was deleted.");
         return true;
     }
+    @PutMapping("updatePlayer")
+    public void updatePlayer(@RequestBody Player player){
+        playerService.updatePlayer(player);
+    }
 }

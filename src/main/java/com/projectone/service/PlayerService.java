@@ -18,7 +18,8 @@ public class PlayerService {
         this.playerRepository = playerRepository;
     }
 
-    public List<Player> getAllPlayers(){
+    public List<Player> getAllPlayers()
+    {
         return playerRepository.findAll();
     }
 
@@ -35,5 +36,17 @@ public class PlayerService {
     public void deletePlayer(Player player)
     {
         playerRepository.delete(player);
+    }
+    public void updatePlayer(Player player)
+    {
+        if(getAllPlayers().contains(player))
+        {
+            player.setPlayerName(player.getPlayerName());
+            player.setExperienceLevel(player.getExperienceLevel());
+            player.setWeaponChoice(player.getWeaponChoice());
+        }
+        else {
+            savePlayer(player);
+        }
     }
 }

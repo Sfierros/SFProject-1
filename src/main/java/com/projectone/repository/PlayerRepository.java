@@ -17,7 +17,6 @@ public interface PlayerRepository extends JpaRepository<Player, String> {
     Player save(Player player);
 
     void delete(Player player);
-
     /*
     tentative: player level up query
      */
