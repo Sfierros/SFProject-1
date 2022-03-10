@@ -1,6 +1,7 @@
 package com.projectone.repository;
 
 import com.projectone.model.Player;
+import com.projectone.model.Weapon;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -17,7 +18,8 @@ public interface PlayerRepository extends JpaRepository<Player, String> {
     Player save(Player player);
 
     void delete(Player player);
-    /*
-    tentative: player level up query
-     */
+
+    //save persist or EM
+
+    //Player save(Player player, Weapon weapon);
 }

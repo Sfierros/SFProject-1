@@ -14,25 +14,28 @@ public class WeaponController {
         this.weaponService = weaponService;
     }
 
+    //works
     @GetMapping("getAllWeapons")
     public List<Weapon> getAllWeapons(){
         return weaponService.getAllWeapons();
     }
 
+    //works
     @PostMapping("saveWeapon")
     public Weapon createWeapon(@RequestBody Weapon weapon){
         return weaponService.saveWeapon(weapon);
     }
 
-    @GetMapping("weaponChoice/{w}")
-    public Weapon findWeaponByName(@PathVariable String weaponName){
-        return weaponService.findWeaponByName(weaponName);
+    //works
+    @GetMapping("weaponChoice/{weaponChoice}")
+    public Weapon findWeaponByName(@PathVariable String weaponChoice){
+        return weaponService.findWeaponByName(weaponChoice);
     }
 
-    @DeleteMapping("weaponChoice{w}")
+    //works, returns true if delete is successful
+    @DeleteMapping("deleteWeapon/{weapon}")
     public boolean deleteWeapon(@PathVariable Weapon weapon){
         weaponService.deleteWeapon(weapon);
-        System.out.println(weapon.toString() + " was deleted.");
         return true;
     }
 

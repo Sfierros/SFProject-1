@@ -20,6 +20,5 @@ public class Player {
 
     @ManyToOne
     @JoinColumn(name = "weaponChoice")
-    //the problem might be that I'm referencing a String and comparing it to a Weapon object????
-    private Weapon weaponChoice;
+    private Weapon weapon;
 }

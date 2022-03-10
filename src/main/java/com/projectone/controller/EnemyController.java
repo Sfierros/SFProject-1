@@ -18,7 +18,7 @@ public class EnemyController {
     }
 
     //works
-    @GetMapping
+    @GetMapping("getAllEnemies")
     public List<Enemy> getAllEnemies()
     {
         return enemyService.getAllEnemies();
@@ -44,14 +44,14 @@ public class EnemyController {
     }
 
     //works! Do not enter enemy name with " "
-    @GetMapping("name/{name}")
+    @GetMapping("enemyName/{name}")
     public Enemy findByEnemyName(@PathVariable String name)
     {
         return enemyService.findEnemyByName(name);
     }
 
     //works, returns true if delete is successful
-    @DeleteMapping("name/{e}")
+    @DeleteMapping("deleteEnemyName/{enemy}")
     public boolean deleteEnemy(@PathVariable Enemy enemy)
     {
             enemyService.deleteEnemy(enemy);

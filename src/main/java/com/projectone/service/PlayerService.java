@@ -2,6 +2,7 @@ package com.projectone.service;
 
 
 import com.projectone.model.Player;
+import com.projectone.model.Weapon;
 import com.projectone.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -43,10 +44,14 @@ public class PlayerService {
         {
             player.setPlayerName(player.getPlayerName());
             player.setExperienceLevel(player.getExperienceLevel());
-            player.setWeaponChoice(player.getWeaponChoice());
+            player.setWeapon(player.getWeapon());
         }
         else {
             savePlayer(player);
         }
     }
+
+//    public void savePlayerWeapon(Player player, Weapon weapon){
+//        playerRepository.save(player, weapon);
+//    }
 }

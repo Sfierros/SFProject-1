@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface WeaponRepository extends JpaRepository<Weapon, String> {
 
-    @Query("From Player")
+    @Query("From Weapon")
     List<Weapon> findAll();
 
     @Query("From Weapon where weaponChoice = :name")
