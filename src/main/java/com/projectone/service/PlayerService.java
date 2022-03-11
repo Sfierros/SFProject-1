@@ -2,7 +2,6 @@ package com.projectone.service;
 
 
 import com.projectone.model.Player;
-import com.projectone.model.Weapon;
 import com.projectone.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -42,12 +41,14 @@ public class PlayerService {
 
     public void updatePlayer(Player player)
     {
+        //if player is in DB, update the requested info based on provided
         if(playerRepository.findAll().contains(player))
         {
             player.setPlayerName(player.getPlayerName());
             player.setExperienceLevel(player.getExperienceLevel());
             player.setWeapon(player.getWeapon());
         }
+        //player isn't in DB, go ahead and create one with provided info.
         else {
             savePlayer(player);
         }

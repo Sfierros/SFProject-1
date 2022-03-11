@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class PlayerAspect {
 
-    //TODO log each time a player is created.
-
     Logger logger = Logger.getLogger(PlayerAspect.class);
 
     @Before("execution(* createPlayer(..))")

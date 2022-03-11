@@ -1,7 +1,6 @@
 package com.projectone.repository;
 
 import com.projectone.model.Player;
-import com.projectone.model.Weapon;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

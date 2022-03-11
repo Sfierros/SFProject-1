@@ -10,10 +10,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class WeaponAspect {
 
-    //TODO create logging for each creation of a weapon. I create a weapon, I log it.
-
-    //TODO log each time a player is created.
-
     Logger logger = Logger.getLogger(WeaponAspect.class);
 
     @Before("execution(* createWeapon(..))")
