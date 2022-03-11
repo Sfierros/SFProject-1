@@ -18,4 +18,7 @@ public interface PlayerRepository extends JpaRepository<Player, String> {
     Player save(Player player);
 
     void delete(Player player);
+
+    @Query("FROM Player where experienceLevel = (Select max(experienceLevel) from Player)")
+    Player findHighestLevelPlayer();
 }

@@ -52,4 +52,8 @@ public class PlayerService {
             savePlayer(player);
         }
     }
+
+    public Player getHighestLevelPlayer(){
+        return playerRepository.findHighestLevelPlayer();
+    }
 }

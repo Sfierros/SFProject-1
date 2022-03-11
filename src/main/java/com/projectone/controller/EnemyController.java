@@ -24,18 +24,6 @@ public class EnemyController {
         return enemyService.getAllEnemies();
     }
 
-    /*
-    Azure SQL Command
-    SELECT TOP 1 enemy_name from enemy
-    ORDER BY NEWID()
-
-    @GetMapping("random")
-    public Enemy getRandomEnemy()
-    {
-        return enemyService.getRandomEnemy();
-    }
-    */
-
     //works
     @PostMapping("saveEnemy")
     public Enemy createEnemy(@RequestBody Enemy enemy)

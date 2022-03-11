@@ -23,15 +23,10 @@ public class EnemyService{
         this.enemyRepository = enemyRepository;
     }
 
-    public List<Enemy> getAllEnemies() {
+    public List<Enemy> getAllEnemies()
+    {
         return enemyRepository.findALl();
     }
-
-
-//    public Enemy getRandomEnemy()
-//    {
-//        return (Enemy) em.createNamedQuery("getRandomEnemy");
-//    }
 
     public Enemy saveEnemy(Enemy enemy)
     {

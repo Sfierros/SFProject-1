@@ -23,7 +23,9 @@ public class Weapon {
 
     @Id
     private String weaponChoice;
-//
+
+//I didn't seem to need this, I will ask Ted about this. It prints out nicer on Postman without it and my
+//relationship isn't tied down by it either.
 //    @OneToMany(fetch = FetchType.LAZY)
 //    @JoinColumn(name = "weaponChoice")
 //    public List<Player> player;

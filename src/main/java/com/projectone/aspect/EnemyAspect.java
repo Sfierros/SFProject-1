@@ -19,5 +19,5 @@ public class EnemyAspect {
     {
         logger.info(joinPoint.getSignature());
     }
-    //TODO ideally create one for our getRandomEnemy
+
 }

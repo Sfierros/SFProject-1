@@ -47,9 +47,15 @@ public class PlayerController {
         return true;
     }
 
-    //works with experience, need to test with Weapons
+    //works!!
     @PutMapping("updatePlayer")
     public void updatePlayer(@RequestBody Player player){
         playerService.updatePlayer(player);
+    }
+
+    @GetMapping("highestLevelPlayer")
+    public Player getHighestLevelPlayer()
+    {
+        return playerService.getHighestLevelPlayer();
     }
 }

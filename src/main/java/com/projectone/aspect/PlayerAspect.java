@@ -1,5 +1,8 @@
 package com.projectone.aspect;
 
+import org.apache.log4j.Logger;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -7,5 +10,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class PlayerAspect {
 
-    //TODO create logging for before creating player and upon level up (maybe)
+    //TODO log each time a player is created.
+
+    Logger logger = Logger.getLogger(PlayerAspect.class);
+
+    @Before("execution(* createPlayer(..))")
+    public void beforeCreatingPlayer(JoinPoint joinPoint)
+    {
+        logger.info(joinPoint.getSignature());
+    }
 }
