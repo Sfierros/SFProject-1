@@ -37,7 +37,7 @@ public class PlayerController {
     {
         return playerService.findPlayerByName(name);
     }
-
+//
 //    @PostMapping("playerName/weaponChoice")
 //    public void setPlayerWeapon(@RequestBody Player player, Weapon weapon)
 //    {
@@ -54,6 +54,7 @@ public class PlayerController {
         return true;
     }
 
+    //works with experience, need to test with Weapons
     @PutMapping("updatePlayer")
     public void updatePlayer(@RequestBody Player player){
         playerService.updatePlayer(player);

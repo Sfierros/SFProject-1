@@ -38,9 +38,11 @@ public class PlayerService {
     {
         playerRepository.delete(player);
     }
+
+
     public void updatePlayer(Player player)
     {
-        if(getAllPlayers().contains(player))
+        if(playerRepository.findAll().contains(player))
         {
             player.setPlayerName(player.getPlayerName());
             player.setExperienceLevel(player.getExperienceLevel());
