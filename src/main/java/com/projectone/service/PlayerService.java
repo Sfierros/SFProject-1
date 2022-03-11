@@ -52,8 +52,4 @@ public class PlayerService {
             savePlayer(player);
         }
     }
-
-//    public void savePlayerWeapon(Player player, Weapon weapon){
-//        playerRepository.save(player, weapon);
-//    }
 }

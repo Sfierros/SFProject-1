@@ -18,8 +18,4 @@ public interface PlayerRepository extends JpaRepository<Player, String> {
     Player save(Player player);
 
     void delete(Player player);
-
-    //save persist or EM
-
-    //Player save(Player player, Weapon weapon);
 }

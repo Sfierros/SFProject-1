@@ -23,13 +23,9 @@ public class Weapon {
 
     @Id
     private String weaponChoice;
+//
+//    @OneToMany(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "weaponChoice")
+//    public List<Player> player;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "weaponChoice")
-    public List<Player> player;
-
-//    public Weapon(String weaponChoice)
-//    {
-//        this.weaponChoice = weaponChoice;
-//    }
 }

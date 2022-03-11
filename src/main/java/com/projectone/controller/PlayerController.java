@@ -1,7 +1,6 @@
 package com.projectone.controller;
 
 import com.projectone.model.Player;
-import com.projectone.model.Weapon;
 import com.projectone.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -37,12 +36,6 @@ public class PlayerController {
     {
         return playerService.findPlayerByName(name);
     }
-//
-//    @PostMapping("playerName/weaponChoice")
-//    public void setPlayerWeapon(@RequestBody Player player, Weapon weapon)
-//    {
-//        playerService.savePlayerWeapon(player,weapon);
-//    }
 
 
     //works
