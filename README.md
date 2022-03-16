@@ -1,15 +1,15 @@
 # SFProject-1
 
-Project Description
+#Project Description
 
   This project is meant to be a player creation extension of my Project 0. My project 0 was a text-rpg playable via the terminal using scanner and JDBC to query and update the
 players' adventure. In this project, we are just to create a player whom can have a weapon and an experience level, as well as create their enemy whom contain an exp level.
 
-Technologies Used
+#Technologies Used
 
   Servlets, Hibernate, Azure SQL Databases, Spring Data, Spring Boot, Spring AOP, Spring Framework,
 
-Features
+#Features
   
   Create a player who can have a designated experience level and weapon
   Create many weapons that can belong to a single player
@@ -23,6 +23,6 @@ Features
   
   Delete designated player, enemy, or weapon from Database
   
-To-Do list:
+#To-Do list:
   
   Add weapon functionality to Enemies
